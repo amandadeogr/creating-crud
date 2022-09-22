@@ -5,82 +5,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    
     <link
-      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/button.css" />
-    <link rel="stylesheet" href="css/records.css" />
+
     <link rel="stylesheet" href="css/modal.css" />
+
     <script src="main.js" defer></script>
     <title>CRUD</title>
   </head>
 
   <body>
     <header>
-      <h1 class="header-title">Cadastro de Clientes</h1>
+      <nav class="navbar navbar-dark bg-dark p-4">
+        <div class="container-fluid">
+          <a class="navbar-brand">Cadastro de clientes</a>
+          <button type="button" class="btn btn-success" id="cadastrarCliente">
+            Cadastrar Cliente
+          </button>
+        </div>
+      </nav>
     </header>
+
     <main>
-      <button type="button" class="button blue mobile" id="cadastrarCliente">
-        Cadastrar Cliente
-      </button>
-      <table id="tableClient" class="records">
+      <table class="table table-dark table-hover" id="tableClient">
         <thead>
-          <tr>
-            <th>Nome</th>
-            <th>E-mail</th>
-            <th>Celular</th>
-            <th>Cidade</th>
-            <th>Ação</th>
+          <tr">
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Contact</th>
+            <th scope="col">City</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          
+        </tbody>
       </table>
-      <div class="modal" id="modal">
-        <div class="modal-content">
+
+      <div
+      class="modal"
+      id="modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark bg-gradient">
           <header class="modal-header">
-            <h2>Novo Cliente</h2>
-            <span class="modal-close" id="modalClose">&#10006;</span>
+            <h2 class="modal-title text-white">Novo Cliente</h2>
           </header>
-          <form id="form" class="modal-form">
-            <input
-              type="text"
-              id="nome"
-              data-index="new"
-              class="modal-field"
-              placeholder="Nome do Cliente"
-              required
-            />
-            <input
-              type="email"
-              id="email"
-              class="modal-field"
-              placeholder="e-mail do Cliente"
-              required
-            />
-            <input
-              type="text"
-              id="celular"
-              class="modal-field"
-              placeholder="Celular do Cliente"
-              required
-            />
-            <input
-              type="text"
-              id="cidade"
-              class="modal-field"
-              placeholder="Cidade do Cliente"
-              required
-            />
-          </form>
-          <footer class="modal-footer">
-            <button id="salvar" class="button green">Salvar</button>
-            <button id="cancelar" class="button blue">Cancelar</button>
-          </footer>
+          <div>
+            <form id="form" class="modal-form">
+              <div class="row p-4">
+                <div class="mb-3">
+                  <input
+                  type="text"
+                  id="nome"
+                  data-index="new"
+                  class="modal-field form-control ml-ms-5"
+                  placeholder="Nome do Cliente"
+                  required
+                />
+                </div>
+                <div class="mb-3">
+                  <input
+                  type="email"
+                  id="email"
+                  class="modal-field form-control ml-sm-2"
+                  placeholder="e-mail do Cliente"
+                  required
+                />
+                </div>
+                <div class="mb-3">
+                  <input
+                  type="text"
+                  id="celular"
+                  class="modal-field form-control ml-sm-2"
+                  placeholder="Celular do Cliente"
+                  required
+                />
+                </div>
+    
+                <div class="mb-3">
+                  <input
+                  type="text"
+                  id="cidade"
+                  class="modal-field form-control ml-sm-2"
+                  placeholder="Cidade do Cliente"
+                  required
+                />
+                </div>
+                <div class="modal-footer">
+                  <button id="salvar" class="btn btn-success">Salvar</button>
+                  <button id="fechar" class="btn btn-danger">Cancelar</button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </main>
-    <footer>Copyright &copy; Prof. Fernando Leonid</footer>
+    </div>
+  </main>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

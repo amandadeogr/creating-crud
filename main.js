@@ -47,7 +47,6 @@ const clearFields = () => {
 };
 
 const saveClient = () => {
-  debugger;
   if (isValidFields()) {
     const client = {
       nome: document.getElementById("nome").value,
@@ -77,8 +76,8 @@ const createRow = (client, index) => { //dará um indice para cada elemento
         <td>${client.cidade}</td>
         <td>
           <!-- <button type="button" class="button green" data-action="edit">Editar</button> -->
-            <button type="button" class="button green" id="edit-${index}">Editar</button> 
-            <button type="button" class="button red" id="delete-${index}" >Excluir</button>
+            <button type="button" class="btn btn-success" id="edit-${index}">Editar</button> 
+            <button type="button" class="btn btn-danger" id="delete-${index}" >Excluir</button>
         </td>
     `; // a saida no console dos buttons será: edit-01 e delete-01 e assim por diante  
   document.querySelector("#tableClient>tbody").appendChild(newRow);
@@ -138,7 +137,7 @@ document
   .getElementById("cadastrarCliente")
   .addEventListener("click", openModal);
 
-document.getElementById("modalClose").addEventListener("click", closeModal);
+document.getElementById("fechar").addEventListener("click", closeModal);
 
 document.getElementById("salvar").addEventListener("click", saveClient);
 
@@ -146,4 +145,3 @@ document
   .querySelector("#tableClient>tbody")
   .addEventListener("click", editDelete);
 
-document.getElementById("cancelar").addEventListener("click", closeModal);
