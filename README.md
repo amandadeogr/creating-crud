@@ -6,13 +6,10 @@ O objetivo foi criar um crud para cadastro de clientes, com os campos: Nome, Ema
 * Javascript funcional
 * HTML
 * Bootstrap
-* Modularização
-* Regex
 * LocalStorage
 
-## Principais aprendizados
-Essa foi a minha primeira vez criando um crud. O que eu mais gostei de aprender, foi como modularizar os códigos JS, pois, certamente, é algo que irei utilizar nas demais linguagens que irei aprender.
 
 ## Proximos passos
 * Começar meus estudos em ReactJS.
+* Aprender modularização
 * Praticar mais JS orientação a objetos.
